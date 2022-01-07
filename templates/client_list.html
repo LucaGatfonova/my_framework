@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}
+Список клиентов
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+	<div class="zebra">
+		<li>
+			<a href="/create_client/">Создать клиента</a>
+		</li>
+		<li>
+			<a href="/add_client/">Добавить клиента на занятие</a>
+		</li>
+	</div>
+    <h1>Список клиентов</h1>
+    <div>
+
+        {% for item in objects_list %}
+        <li>
+            {{item.name}}
+            {% for sport in item.sports %}
+                {{sport.name}}
+            {% endfor %}
+        </li>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

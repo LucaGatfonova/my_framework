@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+Создание клиента
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+    <div class="zebra">
+		<li>
+			<a href="/client_list/">Список клиентов</a>
+		</li>
+		<li>
+			<a href="/add_client/">Добавить клиента на занятие</a>
+		</li>
+	</div>
+    <div>
+        <h1>Создание клиента</h1>
+        <form method="post">
+            <input class="form-style-6" type="text" name="name" placeholder="Имя">
+            <button class="form-style-6" type="submit">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

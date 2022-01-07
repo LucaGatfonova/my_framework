@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+Создание занятий
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<h1>Создание занятий</h1>
+    <div>
+        <a href="/sports_list/?id={{id}}">назад</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h1>Создание занятий для локации "{{name}}"</h1>
+        <form method="post">
+            <input class="form-style-6" type="text" name="name" placeholder="Название">
+            <button class="form-style-6" type="submit">Сохранить и вернуться к списку занятий</button>
+        </form>
+    </div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

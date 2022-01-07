@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}
+Запись клиента к персональному тренеру
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+	<div class="zebra">
+		<li>
+			<a href="/trainer_list/">Список тренеров</a>
+		</li>
+		<li>
+			<a href="/create_trainer/">Создать тренера</a>
+		</li>
+	</div>
+    <h1>Запись клиента к персональному тренеру</h1>
+    <form class="form-style-6" method="post">
+        <select name="trainer_name">
+            {% for item in trainers %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <select name="client_name">
+            {% for item in clients %}
+            <option value="{{item.name}}">{{item.name}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Записать" />
+    </form>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

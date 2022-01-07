@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}
+Создание локаций
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+<h1>Создание локации</h1>
+<form method="POST">
+    <input class="form-style-6" type="text" name="name" placeholder="Название">
+    <button class="form-style-6" type="submit">Сохранить и вернуться на главную</button>
+</form>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

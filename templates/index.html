@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}
+	Фитнес-клуб
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+	<div class="zebra">
+		<a href="/create_location/">Создать новую локацию</a>
+	</div>
+	<div>
+		<h1>Список существующих локаций</h1>
+        {% for item in objects_list %}
+        <li>
+            {{item.name}} <span>Количество занятий: {{item.sport_count()}}</span>
+			<a href="/sports_list/?id={{item.id}}">Показать занятия</a>
+        </li>
+        {% endfor %}
+	</div>
+	<div class="zebra">
+		<li>
+			<a href="/client_list/">Список клиентов</a>
+		</li>
+		<li>
+			<a href="/create_client/">Создать клиента</a>
+		</li>
+		<li>
+			<a href="/add_client/">Добавить клиента на занятие</a>
+		</li>
+		<li>
+			<a href="/add_client_trainer/">Записать клиента к персональному тренеру</a>
+		</li>
+	</div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

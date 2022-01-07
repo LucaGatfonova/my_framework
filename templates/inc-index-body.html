@@ -1,0 +1,58 @@
+<div class="content">
+    <h1>Расписание занятий фитнес-клуба на {{ data }}</h1>
+
+      <table class="table">
+<thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Занятие</th>
+      <th scope="col">Место</th>
+      <th scope="col">Дата</th>
+      <th scope="col">Время</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>СПОРТИВНОЕ ПЛАВАНИЕ</td>
+      <td>Бассейн</td>
+      <td>{{ data }}</td>
+      <td>11:00-12:00</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>SUPER SCULPT</td>
+      <td>Большой зал</td>
+      <td>{{ data }}</td>
+      <td>15:00-16:00</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>STRETCHING</td>
+      <td>Малый зал</td>
+      <td>{{ data }}</td>
+      <td>16:00-17:00</td>
+    </tr>
+  </tbody>
+    </table>
+    <form class="form-style-6" action="" method="POST">
+        <fieldset >
+            <h1>Запишитесь на занятие</h1>
+                <div class="fmb-3">
+                    <label class="form-label" for="name">Имя</label>
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="text" name="email" id="email">
+                </div>
+                    <select class="form-select" aria-label="Default select example">
+                    <option value="1">СПОРТИВНОЕ ПЛАВАНИЕ</option>
+                    <option value="2">SUPER SCULPT</option>
+                    <option value="3">STRETCHING</option>
+                </select><br>
+            </fieldset>
+        <input type="submit" value="Записаться" />
+    </form>
+
+</div>

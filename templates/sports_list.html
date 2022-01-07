@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}
+Список занятий
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+    <div>
+        <a href="/">назад на главную</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="zebra">
+        <a href="/create_sport/?id={{id}}">Создать новое занятие</a>
+        <br>
+        <h1>Список занятий для локации "{{name}}"</h1>
+        {% for item in objects_list %}
+        <li>
+            {{item.name}} <span><a href="/copy_sport/?name={{item.name}}">скопировать</a></span>
+        </li>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}

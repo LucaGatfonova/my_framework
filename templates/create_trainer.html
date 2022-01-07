@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}
+Создание тренера
+{% endblock %}
+{% block menu %}
+	{% include "inc-menu.html" %}
+{% endblock %}
+{% block body %}
+    <div class="zebra">
+		<li>
+			<a href="/trainer_list/">Список клиентов</a>
+		</li>
+		<li>
+			<a href="/add_client_trainer/">Запись клиента к персональному тренеру</a>
+		</li>
+	</div>
+    <div>
+        <h1>Создание тренера</h1>
+        <form method="post">
+            <input class="form-style-6" type="text" name="name" placeholder="Имя">
+            <button class="form-style-6" type="submit">Сохранить</button>
+        </form>
+    </div>
+{% endblock %}
+{% block footer %}
+	{% include "inc-footer.html" %}
+{% endblock %}
